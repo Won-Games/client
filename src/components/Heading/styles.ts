@@ -16,10 +16,10 @@ const wrapperModifiers = {
     &::after {
       position: absolute;
       left: 0;
-      bottom: -1rem;
+      bottom: -0.5rem;
       content: '';
       width: 5rem;
-      border: 0.4rem solid ${theme.colors.primary};
+      border-bottom: 0.5rem solid ${theme.colors.primary};
     }
   `
 }
