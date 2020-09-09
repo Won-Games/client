@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> should render correctly 1`] = `
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: linear-gradient(180deg,#ff5f5f 0%,#f062c0 50%);
+  color: #FAFAFA;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 5rem;
+  font-size: 1.6rem;
+  padding: 0.8rem 4.8rem;
+}
+
+.c5:hover {
+  background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
+}
+
+.c0 {
+  position: relative;
+}
+
+.c1 {
+  width: 100%;
+  height: 23rem;
+  background-color: #EAEAEA;
+  background-image: url(https://source.unsplash.com/user/willianjusten/1042x580);
+  background-position: center center;
+  background-size: cover;
+}
+
+.c2 {
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  padding: 2.4rem;
+}
+
+.c3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #FAFAFA;
+}
+
+.c4 {
+  color: #FAFAFA;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+.c4 strong {
+  color: #F231A5;
+  font-weight: 600;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    box-shadow: 0 0.4rem 0.5rem 0 rgba(0,0,0,0.2);
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    height: 58rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    border-radius: 0 0 0.4rem 0.4rem;
+    padding: 4.0rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c4 {
+    font-size: 1.8rem;
+  }
+}
+
+<main
+  class="c0"
+>
+  <div
+    aria-label="Defy death"
+    class="c1"
+    role="img"
+    src="https://source.unsplash.com/user/willianjusten/1042x580"
+  />
+  <div
+    class="c2"
+  >
+    <h2
+      class="c3"
+    >
+      Defy death
+    </h2>
+    <h3
+      class="c4"
+    >
+      <p>
+        Play the new 
+        <strong>
+          CrashLands
+        </strong>
+         season
+      </p>
+    </h3>
+    <a
+      class="c5"
+      href="/games/defy-death"
+    >
+      <span>
+        Buy now
+      </span>
+    </a>
+  </div>
+</main>
+`
