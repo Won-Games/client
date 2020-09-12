@@ -29,4 +29,16 @@ describe('<GameCard />', () => {
 
     expect(screen.getByLabelText(/add to wishlist/i)).toBeInTheDocument()
   })
+
+  it('should render price in label', () => {
+    // renderiza o componente
+    // preço não tenha line-through
+    // preço tenha o background secundário
+  })
+
+  it('should render a line-through in price when promotional', () => {
+    // renderiza o componente (COM promotionalPrice) // 200 reais // 15 reais
+    // preço tenha line-through (200)
+    // preço novo promocional não vai ter line-through (15)
+  })
 })
