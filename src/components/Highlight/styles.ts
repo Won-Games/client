@@ -91,7 +91,7 @@ export const Title = styled.h2`
   `}
 `
 
-export const Subtitle = styled.h3`
+export const SubTitle = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.light};
