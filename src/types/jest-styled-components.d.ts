@@ -20,6 +20,7 @@ declare global {
       supports?: string
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     interface Matchers<R, T> {
       toHaveStyleRule(property: string, value?: Value, options?: Options): R
     }
