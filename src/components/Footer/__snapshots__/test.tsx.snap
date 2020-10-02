@@ -33,7 +33,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
 
 .c2 {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: minmax(auto,50%) 1fr;
   gap: 3.2rem;
   margin-top: 3.2rem;
 }
@@ -46,6 +46,11 @@ exports[`<Footer /> should render 4 column topics 1`] = `
   text-decoration: none;
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
+}
+
+.c3 a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .c3 a:hover {
