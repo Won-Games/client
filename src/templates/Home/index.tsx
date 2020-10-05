@@ -63,7 +63,7 @@ const Home = ({
 
       <S.SectionUpcoming>
         <Heading lineLeft lineColor="secondary">
-          Upcomming
+          Upcoming
         </Heading>
         <GameCardSlider items={upcommingGames} />
         <Highlight {...upcommingHighlight} />
