@@ -31,6 +31,14 @@ describe('<TextField />', () => {
     expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
 
+  it('Renders with Icon on the right side', () => {
+    renderWithTheme(
+      <TextField icon={<Email data-testid="icon" />} iconPosition="right" />
+    )
+
+    expect(screen.getByTestId('icon').parentElement).toHaveStyle({ order: 1 })
+  })
+
   it('Changes its value when typing', async () => {
     const onInput = jest.fn()
     renderWithTheme(
