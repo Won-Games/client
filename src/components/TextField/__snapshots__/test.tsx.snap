@@ -59,6 +59,7 @@ exports[`<TextField /> Renders with error 1`] = `
 
 .c9 {
   color: #FF6347;
+  font-size: 1.2rem;
 }
 
 .c0 .c3 {
@@ -115,4 +116,4 @@ exports[`<TextField /> Renders with error 1`] = `
     Error message
   </p>
 </div>
-`;
+`
