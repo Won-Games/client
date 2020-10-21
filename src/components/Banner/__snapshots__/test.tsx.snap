@@ -70,11 +70,11 @@ exports[`<Banner /> should render correctly 1`] = `
 }
 
 @media (max-width:1170px) {
-  .c0 .sc-AxjAm {
+  .c0 .sc-bdnylx {
     right: 0;
   }
 
-  .c0 .sc-AxjAm::before {
+  .c0 .sc-bdnylx::before {
     display: none;
   }
 }
