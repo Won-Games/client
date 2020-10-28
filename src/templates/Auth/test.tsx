@@ -3,11 +3,21 @@ import { render, screen } from '@testing-library/react'
 import Auth from '.'
 
 describe('<Auth />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<Auth />)
+  it('should render all components and children', () => {
+    render(
+      <Auth title="Auth Title">
+        <input type="text" />
+      </Auth>
+    )
 
-    expect(screen.getByRole('heading', { name: /Auth/i })).toBeInTheDocument()
+    // verifiquem se tem 2 logos
 
-    expect(container.firstChild).toMatchSnapshot()
+    // verifica se tem o heading principal do banner
+
+    // verifica se tem o subtitle
+
+    // verifica se tem o title do content
+
+    // verifica se o children tá sendo renderizado
   })
 })
