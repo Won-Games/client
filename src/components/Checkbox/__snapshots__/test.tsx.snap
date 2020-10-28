@@ -60,6 +60,12 @@ exports[`<Checkbox /> should render with label 1`] = `
   box-shadow: 0 0 0.5rem #F231A5;
 }
 
+.c1:hover {
+  border-color: #8F8F8F;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
 .c1:checked {
   border-color: #F231A5;
   background: #F231A5;
