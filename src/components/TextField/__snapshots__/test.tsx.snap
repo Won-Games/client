@@ -110,10 +110,10 @@ exports[`<TextField /> Renders with error 1`] = `
       value=""
     />
   </div>
-  <p
+  <span
     class="c9"
   >
     Error message
-  </p>
+  </span>
 </div>
 `

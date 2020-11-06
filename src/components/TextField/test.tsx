@@ -85,6 +85,20 @@ describe('<TextField />', () => {
     expect(onInput).not.toHaveBeenCalled()
   })
 
+  it('should render with loading', () => {
+    renderWithTheme(
+      <TextField
+        icon={<Email data-testid="icon" />}
+        id="TextField"
+        label="TextField"
+        labelFor="TextField"
+        loading="Validating..."
+      />
+    )
+
+    expect(screen.getByText('Validating...')).toBeInTheDocument()
+  })
+
   it('Renders with error', () => {
     const { container } = renderWithTheme(
       <TextField

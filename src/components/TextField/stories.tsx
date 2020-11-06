@@ -36,3 +36,13 @@ export const withError: Story<TextFieldProps> = (args) => (
 withError.args = {
   error: 'Ops...something is wrong'
 }
+
+export const withLoading: Story<TextFieldProps> = (args) => (
+  <div style={{ maxWidth: 300, padding: 15 }}>
+    <TextField {...args} />
+  </div>
+)
+
+withLoading.args = {
+  loading: 'Validating...'
+}

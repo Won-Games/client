@@ -4,7 +4,9 @@ import { TextFieldProps } from '.'
 
 type IconPositionProps = Pick<TextFieldProps, 'iconPosition'>
 
-type WrapperProps = Pick<TextFieldProps, 'disabled'> & { error?: boolean }
+type WrapperProps = Pick<TextFieldProps, 'disabled'> & { error?: boolean } & {
+  isLoading?: boolean
+}
 
 export const InputWrapper = styled.div`
   ${({ theme }) => css`
@@ -56,10 +58,37 @@ export const Icon = styled.div<IconPositionProps>`
   `}
 `
 
-export const Error = styled.p`
+export const Error = styled.span`
   ${({ theme }) => css`
     color: ${theme.colors.red};
     font-size: ${theme.font.sizes.xsmall};
+  `}
+`
+
+export const Loading = styled.span`
+  ${({ theme }) => css`
+    position: relative;
+    padding-left: 2rem;
+    color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.xsmall};
+
+    &::before {
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      border: 0.2rem solid ${theme.colors.lightGray};
+      border-left-color: ${theme.colors.primary};
+      border-radius: 50%;
+      width: ${theme.font.sizes.small};
+      height: ${theme.font.sizes.small};
+      animation: spin 1s linear infinite;
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
   `}
 `
 
@@ -72,6 +101,11 @@ const wrapperModifiers = {
     ${Icon},
     ${Label} {
       color: ${theme.colors.red};
+    }
+  `,
+  loading: (theme: DefaultTheme) => css`
+    ${InputWrapper} {
+      border-color: ${theme.colors.primary};
     }
   `,
   disabled: (theme: DefaultTheme) => css`
@@ -89,8 +123,9 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.div<WrapperProps>`
-  ${({ theme, error, disabled }) => css`
+  ${({ theme, error, isLoading, disabled }) => css`
     ${error && wrapperModifiers.error(theme)}
+    ${isLoading && wrapperModifiers.loading(theme)}
     ${disabled && wrapperModifiers.disabled(theme)}
   `}
 `
