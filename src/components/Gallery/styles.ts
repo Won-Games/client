@@ -60,8 +60,33 @@ const modalModifiers = {
 }
 
 export const Modal = styled.div<ModalProps>`
-  ${({ isOpen }) => css`
+  ${({ theme, isOpen }) => css`
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: ${theme.layers.modal};
+    transition: opacity ${theme.transition.default};
+
     ${isOpen && modalModifiers.open()}
     ${!isOpen && modalModifiers.close()}
+  `}
+`
+
+export const Close = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: right;
   `}
 `
