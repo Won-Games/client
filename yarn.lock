@@ -3146,6 +3146,14 @@
     resolve-from "^5.0.0"
     store2 "^2.7.1"
 
+"@styled-icons/boxicons-solid@^10.18.0":
+  version "10.18.0"
+  resolved "https://registry.yarnpkg.com/@styled-icons/boxicons-solid/-/boxicons-solid-10.18.0.tgz#59486a731df3dd0354411e2b47a0ab6938b7a385"
+  integrity sha512-qQeEJsYse1XW89vd0AuHgDMiYwR81hEeBPbLNJC5rU6B+fBvJ+hFxd8GNxNe71WrLhpw3n4pjMqVmcNaFlAZ6Q==
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    "@styled-icons/styled-icon" "^10.6.0"
+
 "@styled-icons/fa-brands@^10.22.0":
   version "10.22.0"
   resolved "https://registry.yarnpkg.com/@styled-icons/fa-brands/-/fa-brands-10.22.0.tgz#e2edccacc63c54fe229ecb0042628a7c0f2b4c2b"

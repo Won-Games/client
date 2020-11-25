@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "@styled-icons/boxicons-solid": "^10.18.0",
     "@styled-icons/fa-brands": "^10.22.0",
     "@styled-icons/material-outlined": "^10.18.0",
     "@styled-icons/remix-fill": "^10.18.0",
