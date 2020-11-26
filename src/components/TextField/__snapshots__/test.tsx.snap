@@ -12,6 +12,10 @@ exports[`<TextField /> Renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #EAEAEA;
   border-radius: 0.2rem;
   padding: 0 1.6rem;
@@ -46,7 +50,6 @@ exports[`<TextField /> Renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 2.2rem;
   color: #8F8F8F;
   -webkit-order: 0;
   -ms-flex-order: 0;
@@ -54,7 +57,7 @@ exports[`<TextField /> Renders with error 1`] = `
 }
 
 .c6 > svg {
-  width: 100%;
+  width: 2.2rem;
 }
 
 .c9 {
