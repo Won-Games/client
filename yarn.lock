@@ -3178,14 +3178,6 @@
     "@babel/runtime" "^7.10.5"
     "@styled-icons/styled-icon" "^10.6.0"
 
-"@styled-icons/remix-line@^10.18.0":
-  version "10.18.0"
-  resolved "https://registry.yarnpkg.com/@styled-icons/remix-line/-/remix-line-10.18.0.tgz#f6bd167883fb46a0103d60a8f4106823740e4b3e"
-  integrity sha512-UZllhk6hEWFyZt+jdPCO4zbeM0P3Y/Lc1iWWOwUXGP5AzStM2KadjaGpi99FhNfrvrly98cVB8b4M/GVExYn0Q==
-  dependencies:
-    "@babel/runtime" "^7.10.5"
-    "@styled-icons/styled-icon" "^10.6.0"
-
 "@styled-icons/styled-icon@^10.6.0":
   version "10.6.3"
   resolved "https://registry.yarnpkg.com/@styled-icons/styled-icon/-/styled-icon-10.6.3.tgz#eae0e5e18fd601ac47e821bb9c2e099810e86403"
