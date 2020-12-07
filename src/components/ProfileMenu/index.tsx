@@ -37,7 +37,7 @@ const ProfileMenu = ({ activeLink }: ProfileMenuProps) => (
 
     <Link href="/logout" passHref>
       <S.Link>
-        <ExitToApp size={24} />
+        <ExitToApp size={24} title="Sign out"/>
         <span>Sign out</span>
       </S.Link>
     </Link>
