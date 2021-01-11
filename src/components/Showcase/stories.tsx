@@ -19,7 +19,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta
+} as Meta<ShowcaseProps>
 
 export const Default: Story<ShowcaseProps> = (args) => <Showcase {...args} />
 

@@ -9,7 +9,7 @@ export default {
   args: {
     items: itemsMock
   }
-} as Meta
+} as Meta<OrdersListProps>
 
 export const Default: Story<OrdersListProps> = (args) => (
   <div style={{ maxWidth: 850, margin: 'auto' }}>
