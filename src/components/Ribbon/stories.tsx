@@ -12,7 +12,7 @@ export default {
       type: 'string'
     }
   }
-} as Meta<RibbonProps>
+} as Meta
 
 export const Default: Story<RibbonProps> = (args) => (
   <div

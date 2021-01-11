@@ -9,7 +9,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta<EmptyProps>
+} as Meta
 
 export const Default: Story<EmptyProps> = (args) => <Empty {...args} />
 

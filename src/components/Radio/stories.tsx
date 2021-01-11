@@ -13,7 +13,7 @@ export default {
   argTypes: {
     onCheck: { action: 'checked' }
   }
-} as Meta<RadioProps>
+} as Meta
 
 export const Default: Story<RadioProps> = (args) => (
   <>

@@ -9,7 +9,7 @@ export default {
   args: {
     cards: cardsMock
   }
-} as Meta<CardsListProps>
+} as Meta
 
 export const Default: Story<CardsListProps> = (args) => (
   <div style={{ maxWidth: 850, margin: 'auto' }}>

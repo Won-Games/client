@@ -19,7 +19,7 @@ export default {
   parameters: {
     layout: 'fullscreen'
   }
-} as Meta<BannerProps>
+} as Meta
 
 export const Default: Story<BannerProps> = (args) => (
   <div style={{ maxWidth: '104rem', margin: '0 auto' }}>

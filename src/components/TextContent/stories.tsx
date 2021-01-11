@@ -11,7 +11,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta<TextContentProps>
+} as Meta
 
 export const Default: Story<TextContentProps> = (args) => (
   <TextContent {...args} />

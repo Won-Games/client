@@ -6,7 +6,7 @@ export default {
   title: 'Highlight',
   component: Highlight,
   args: { ...item }
-} as Meta<HighlightProps>
+} as Meta
 
 export const Default: Story<HighlightProps> = (args) => (
   <div style={{ maxWidth: '104rem' }}>

@@ -12,7 +12,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta<BannerSliderProps>
+} as Meta
 
 export const Default: Story<BannerSliderProps> = (args) => (
   <div style={{ maxWidth: '130rem', margin: '0 auto' }}>

@@ -9,7 +9,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta<ProfileMenuProps>
+} as Meta
 
 export const Default: Story<ProfileMenuProps> = (args) => (
   <ProfileMenu {...args} />
