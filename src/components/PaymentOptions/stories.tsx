@@ -22,7 +22,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta<PaymentOptionsProps>
+} as Meta
 
 export const Default: Story<PaymentOptionsProps> = (args) => (
   <div style={{ padding: 16, maxWidth: 400 }}>

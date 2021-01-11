@@ -21,7 +21,7 @@ export default {
     onFav: { action: 'clicked' },
     ribbon: { type: 'string' }
   }
-} as Meta<GameCardProps>
+} as Meta
 
 export const Default: Story<GameCardProps> = (args) => (
   <div style={{ width: '30rem' }}>

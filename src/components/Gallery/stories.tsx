@@ -14,7 +14,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta<GalleryProps>
+} as Meta
 
 export const Default: Story<GalleryProps> = (args) => (
   <div style={{ maxWidth: '130rem', margin: '0 auto' }}>

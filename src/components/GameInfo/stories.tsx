@@ -11,7 +11,7 @@ export default {
     }
   },
   args: mockGame
-} as Meta<GameInfoProps>
+} as Meta
 
 export const Default: Story<GameInfoProps> = (args) => (
   <div style={{ maxWidth: '144rem', margin: 'auto', padding: '1.5rem' }}>
