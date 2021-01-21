@@ -26,11 +26,13 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "^3.3.7",
     "@styled-icons/boxicons-regular": "^10.23.0",
     "@styled-icons/boxicons-solid": "^10.18.0",
     "@styled-icons/fa-brands": "^10.22.0",
     "@styled-icons/material-outlined": "^10.18.0",
     "@styled-icons/remix-fill": "^10.18.0",
+    "graphql": "^15.4.0",
     "next": "9.5.5",
     "next-pwa": "^3.1.5",
     "polished": "^3.6.6",
