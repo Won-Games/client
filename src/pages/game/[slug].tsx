@@ -3,7 +3,6 @@ import { initializeApollo } from 'utils/apollo'
 
 import Game, { GameTemplateProps } from 'templates/Game'
 
-import galleryMock from 'components/Gallery/mock'
 import gamesMock from 'components/GameCardSlider/mock'
 import highlightMock from 'components/Highlight/mock'
 import { QueryGames, QueryGamesVariables } from 'graphql/generated/QueryGames'
@@ -65,7 +64,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         price: game.price,
         description: game.short_description
       },
-      gallery: game.gallery,
+      gallery: game.gallery.map((image) => ({
+        src: `http://localhost:1337${image.src}`,
+        label: image.label
+      })),
       description: game.description,
       details: {
         developer: game.developers[0].name,
