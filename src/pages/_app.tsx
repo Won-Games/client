@@ -8,7 +8,7 @@ import theme from 'styles/theme'
 import { useApollo } from 'utils/apollo'
 
 function App({ Component, pageProps }: AppProps) {
-  const client = useApollo(pageProps.initialApoloState)
+  const client = useApollo(pageProps.initialApolloState)
 
   return (
     <ApolloProvider client={client}>
