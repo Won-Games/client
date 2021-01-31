@@ -52,6 +52,7 @@ exports[`<FormSignUp /> should render the form 1`] = `
 
 .c3 > svg {
   width: 2.2rem;
+  height: 100%;
 }
 
 .c7 {
@@ -292,4 +293,4 @@ exports[`<FormSignUp /> should render the form 1`] = `
     </div>
   </form>
 </div>
-`
+`;

@@ -58,6 +58,7 @@ exports[`<TextField /> Renders with error 1`] = `
 
 .c6 > svg {
   width: 2.2rem;
+  height: 100%;
 }
 
 .c9 {
