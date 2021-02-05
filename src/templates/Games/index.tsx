@@ -1,4 +1,4 @@
-import { useQuery } from '@apollo/client'
+import { useQueryGames } from 'graphql/queries/games'
 
 import Base from 'templates/Base'
 import { KeyboardArrowDown as ArrowDown } from '@styled-icons/material-outlined/KeyboardArrowDown'
@@ -8,8 +8,6 @@ import GameCard, { GameCardProps } from 'components/GameCard'
 import { Grid } from 'components/Grid'
 
 import * as S from './styles'
-import { QueryGames, QueryGamesVariables } from 'graphql/generated/QueryGames'
-import { QUERY_GAMES } from 'graphql/queries/games'
 
 export type GamesTemplateProps = {
   games?: GameCardProps[]
@@ -17,10 +15,9 @@ export type GamesTemplateProps = {
 }
 
 const GamesTemplate = ({ filterItems }: GamesTemplateProps) => {
-  const { data, loading, fetchMore } = useQuery<
-    QueryGames,
-    QueryGamesVariables
-  >(QUERY_GAMES, { variables: { limit: 15 } })
+  const { data, loading, fetchMore } = useQueryGames({
+    variables: { limit: 15 }
+  })
 
   const handleFilter = () => {
     return
