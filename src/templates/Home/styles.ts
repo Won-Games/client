@@ -1,7 +1,6 @@
+import * as HeadingStyles from 'components/Heading/styles'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
-
-import * as HeadingStyles from 'components/Heading/styles'
 
 export const SectionBanner = styled.section`
   ${({ theme }) => css`
@@ -18,6 +17,10 @@ export const SectionBanner = styled.section`
 export const SectionNews = styled.div`
   ${({ theme }) => css`
     margin-bottom: calc(${theme.spacings.xxlarge} * 2);
+
+    ${HeadingStyles.Wrapper} {
+      color: ${theme.colors.white};
+    }
 
     ${media.greaterThan('large')`
       margin-top: -13rem;
