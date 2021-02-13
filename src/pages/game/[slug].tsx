@@ -76,7 +76,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      revalidate: 60,
       cover: `http://localhost:1337${game.cover?.src}`,
       gameInfo: {
         title: game.name,
@@ -103,6 +102,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       ),
       recommendedTitle: recommended.recommended?.section?.title,
       recommendedGames: gamesMapper(recommended.recommended?.section?.games)
-    }
+    },
+    revalidate: 60
   }
 }
