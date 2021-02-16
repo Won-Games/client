@@ -6,7 +6,7 @@ export const Wrapper = styled.article`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 260px;
     background-color: ${theme.colors.white};
   `}
 `
@@ -64,6 +64,11 @@ export const Title = styled.h3`
     line-height: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.black};
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
   `}
 `
 
