@@ -77,6 +77,11 @@ export const Developer = styled.h4`
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.gray};
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
   `}
 `
 
