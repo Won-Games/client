@@ -114,6 +114,11 @@ exports[`<GameCard /> should render correctly 1`] = `
   font-size: 1.4rem;
   font-weight: 600;
   color: #8F8F8F;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .c6 {
