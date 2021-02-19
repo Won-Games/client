@@ -1,7 +1,7 @@
-import { screen } from '@testing-library/react'
+import { Matcher, screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import GameDetails, { GameDetailsProps } from '.'
+import GameDetails, { GameDetailsProps, Rating } from '.'
 
 const props: GameDetailsProps = {
   developer: 'Different Tales',
@@ -11,6 +11,14 @@ const props: GameDetailsProps = {
   rating: 'BR0',
   genres: ['Role-playing', 'Narrative']
 }
+const ratings: [Matcher, Rating][] = [
+  [/free/i, 'BR0'],
+  [/10\+/, 'BR10'],
+  [/12\+/, 'BR12'],
+  [/14\+/, 'BR14'],
+  [/16\+/, 'BR16'],
+  [/18\+/, 'BR18']
+]
 
 describe('<GameDetails />', () => {
   it('should render the blocks', () => {
@@ -45,12 +53,6 @@ describe('<GameDetails />', () => {
     expect(screen.getByRole('img', { name: /mac/i })).toBeInTheDocument()
   })
 
-  it('should render free rating when BR0', () => {
-    renderWithTheme(<GameDetails {...props} />)
-
-    expect(screen.getByText(/free/i)).toBeInTheDocument()
-  })
-
   it('should render the developer', () => {
     renderWithTheme(<GameDetails {...props} />)
 
@@ -63,10 +65,10 @@ describe('<GameDetails />', () => {
     expect(screen.getByText(/walktrough/i)).toBeInTheDocument()
   })
 
-  it('should render 18+ rating when BR18', () => {
-    renderWithTheme(<GameDetails {...props} rating="BR18" />)
+  it.each(ratings)('should render %s rating when %s', (matcher, rating) => {
+    renderWithTheme(<GameDetails {...props} rating={rating} />)
 
-    expect(screen.getByText(/18\+/i)).toBeInTheDocument()
+    expect(screen.getByText(matcher)).toBeInTheDocument()
   })
 
   it('should render the formated date', () => {
