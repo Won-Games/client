@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { Matcher, screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import GameDetails, { GameDetailsProps, Rating } from '.'
@@ -11,13 +11,13 @@ const props: GameDetailsProps = {
   rating: 'BR0',
   genres: ['Role-playing', 'Narrative']
 }
-const ratings: [string, Rating][] = [
-  ['FREE', 'BR0'],
-  ['10+', 'BR10'],
-  ['12+', 'BR12'],
-  ['14+', 'BR14'],
-  ['16+', 'BR16'],
-  ['18+', 'BR18']
+const ratings: [Matcher, Rating][] = [
+  [/free/i, 'BR0'],
+  [/10\+/, 'BR10'],
+  [/12\+/, 'BR12'],
+  [/14\+/, 'BR14'],
+  [/16\+/, 'BR16'],
+  [/18\+/, 'BR18']
 ]
 
 describe('<GameDetails />', () => {
@@ -65,10 +65,10 @@ describe('<GameDetails />', () => {
     expect(screen.getByText(/walktrough/i)).toBeInTheDocument()
   })
 
-  it.each(ratings)('should render %s rating when %s', (expected, rating) => {
+  it.each(ratings)('should render %s rating when %s', (matcher, rating) => {
     renderWithTheme(<GameDetails {...props} rating={rating} />)
 
-    expect(screen.getByText(expected)).toBeInTheDocument()
+    expect(screen.getByText(matcher)).toBeInTheDocument()
   })
 
   it('should render the formated date', () => {
