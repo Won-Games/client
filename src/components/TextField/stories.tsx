@@ -9,6 +9,7 @@ export default {
   args: {
     label: 'E-mail',
     name: 'email',
+    type: 'email',
     icon: <Email />,
     initialValue: '',
     placeholder: 'john.cage@gmail.com',

@@ -39,6 +39,10 @@ exports[`<TextField /> Renders with error 1`] = `
   width: 100%;
 }
 
+.c8:invalid {
+  box-shadow: none;
+}
+
 .c2 {
   font-size: 1.4rem;
   color: #030517;
@@ -119,4 +123,4 @@ exports[`<TextField /> Renders with error 1`] = `
     Error message
   </p>
 </div>
-`;
+`

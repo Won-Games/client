@@ -33,6 +33,10 @@ export const Input = styled.input<IconPositionProps>`
     border: 0;
     outline: none;
     width: ${iconPosition === 'right' ? `calc(100% - 2.2rem)` : `100%`};
+
+    &:invalid {
+      box-shadow: none;
+    }
   `}
 `
 

@@ -39,6 +39,10 @@ exports[`<FormSignIn /> should render the form 1`] = `
   width: 100%;
 }
 
+.c5:invalid {
+  box-shadow: none;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -239,4 +243,4 @@ exports[`<FormSignIn /> should render the form 1`] = `
     </div>
   </div>
 </body>
-`;
+`
