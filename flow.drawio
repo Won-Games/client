@@ -1,11 +1,14 @@
-<mxfile host="65bd71144e" modified="2021-02-22T16:53:16.491Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="fUaAgkcp-fsS-XCtYwRm" version="14.2.4" type="embed">
+<mxfile host="65bd71144e" modified="2021-02-22T18:19:25.632Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="qejPq5jKz2MaExBjCH_g" version="14.2.4" type="embed">
     <diagram id="C3-uCIAyBGLOOk2Yy4p0" name="Page-1">
-        <mxGraphModel dx="939" dy="1488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2007" dy="2207" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="117" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="-150" width="430" height="280" as="geometry"/>
+                </mxCell>
                 <mxCell id="101" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="470" y="-680" width="400" height="330" as="geometry"/>
+                    <mxGeometry x="470" y="-650" width="400" height="330" as="geometry"/>
                 </mxCell>
                 <mxCell id="49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -36,16 +39,16 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="Usuário entra na página /game/diablo" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="-710" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="30" y="-680" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="Recebe conteúdo estático (happy path)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="-710" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="270" y="-680" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="16" target="18" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="Usuário entra na página /game/foo" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="-600" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="30" y="-570" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="18" target="27" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -54,19 +57,19 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="Estático não existe" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="-600" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="270" y="-570" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <UserObject label="Não tem fallback" placeholders="1" name="Variable" id="23">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
-                        <mxGeometry x="210" y="-520" width="100" height="50" as="geometry"/>
+                        <mxGeometry x="210" y="-490" width="100" height="50" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <mxCell id="24" value="Retorna 404" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="-450" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="270" y="-420" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <UserObject label="Tem fallback" placeholders="1" name="Variable" id="26">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
-                        <mxGeometry x="390" y="-590" width="90" height="20" as="geometry"/>
+                        <mxGeometry x="390" y="-560" width="90" height="20" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <mxCell id="39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="27" target="29" edge="1">
@@ -76,39 +79,84 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="Busca o dado no banco e mostra a página em espera" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="490" y="-600" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="490" y="-570" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="29" target="24" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <UserObject label="Não existe dado" placeholders="1" name="Variable" id="29">
                     <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
-                        <mxGeometry x="490" y="-480" width="100" height="50" as="geometry"/>
+                        <mxGeometry x="490" y="-450" width="100" height="50" as="geometry"/>
                     </mxCell>
                 </UserObject>
                 <mxCell id="45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="32" target="35" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="Gera estático" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="-600" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="720" y="-570" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="35" value="Retorna a página" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="-450" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="720" y="-420" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="42" value="Existe dado" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
-                    <mxGeometry x="630" y="-600" width="80" height="20" as="geometry"/>
+                    <mxGeometry x="630" y="-570" width="80" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="50" value="&lt;h1&gt;Funcionamento SSG = Estático&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
                     <mxGeometry x="40" y="-1070" width="370" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="102" value="Revalidate serve para &lt;br&gt;repetir esse processo em N segundos&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
-                    <mxGeometry x="580" y="-720" width="220" height="30" as="geometry"/>
+                    <mxGeometry x="580" y="-690" width="220" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="103" value="yarn build" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                <mxCell id="103" value="yarn build" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
                     <mxGeometry x="470" y="-950" width="70" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="104" value="ISR" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-                    <mxGeometry x="670" y="-740" width="40" height="20" as="geometry"/>
+                <mxCell id="104" value="ISR" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="-710" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="105" target="106">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="Usuário 1 entra na página estática" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="-110" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="Entrega o estático" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="325" y="-70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="108" target="109">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="Usuário 2 entra na página estática" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="-30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="Entrega estático" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="325" y="-70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="111" target="112">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="Usuário 3 entra na página estática" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="Entrega estático" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="325" y="-70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="114" target="115">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="Usuário 4 entra na página estática depois do tempo de revalidate" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="Entrega estático &lt;br&gt;novo" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="-70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="Acessos durante o intervalo do revalidate" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="-140" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="35.00000000000023" y="-230" as="sourcePoint"/>
+                        <mxPoint x="845" y="-230" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
