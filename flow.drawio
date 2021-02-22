@@ -1,0 +1,116 @@
+<mxfile host="65bd71144e" modified="2021-02-22T16:53:16.491Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" etag="fUaAgkcp-fsS-XCtYwRm" version="14.2.4" type="embed">
+    <diagram id="C3-uCIAyBGLOOk2Yy4p0" name="Page-1">
+        <mxGraphModel dx="939" dy="1488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="101" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="-680" width="400" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="GetStaticPaths" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="-970" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="GetStaticProps" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="275" y="-970" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <UserObject label="Gera as urls&lt;br&gt;&lt;br&gt;/game/diablo&lt;br&gt;/game/warcraft" placeholders="1" name="Variable" id="8">
+                    <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
+                        <mxGeometry x="10" y="-920" width="170" height="100" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <UserObject label="Gera as páginas estáticas&lt;br&gt;&lt;br&gt;/game/diablo/index.html&lt;br&gt;/game/warcraft/index.html&lt;br&gt;" placeholders="1" name="Variable" id="9">
+                    <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
+                        <mxGeometry x="250" y="-920" width="170" height="100" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="11" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="30" y="-790" as="sourcePoint"/>
+                        <mxPoint x="840" y="-790" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="12" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Usuário entra na página /game/diablo" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="-710" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Recebe conteúdo estático (happy path)" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="-710" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="16" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Usuário entra na página /game/foo" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="-600" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="18" target="27" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="18" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Estático não existe" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="-600" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <UserObject label="Não tem fallback" placeholders="1" name="Variable" id="23">
+                    <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
+                        <mxGeometry x="210" y="-520" width="100" height="50" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="24" value="Retorna 404" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="-450" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <UserObject label="Tem fallback" placeholders="1" name="Variable" id="26">
+                    <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
+                        <mxGeometry x="390" y="-590" width="90" height="20" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="27" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="27" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Busca o dado no banco e mostra a página em espera" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="-600" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="29" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <UserObject label="Não existe dado" placeholders="1" name="Variable" id="29">
+                    <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" parent="1" vertex="1">
+                        <mxGeometry x="490" y="-480" width="100" height="50" as="geometry"/>
+                    </mxCell>
+                </UserObject>
+                <mxCell id="45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="32" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Gera estático" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="-600" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Retorna a página" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="-450" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Existe dado" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="-600" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="&lt;h1&gt;Funcionamento SSG = Estático&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="-1070" width="370" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="Revalidate serve para &lt;br&gt;repetir esse processo em N segundos&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="-720" width="220" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="yarn build" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="-950" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="ISR" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="-740" width="40" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
