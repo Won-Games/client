@@ -47,3 +47,5 @@ export const highlightMapper = (
       }
     : {}
 }
+
+export const cartMapper = () => {}
