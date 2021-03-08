@@ -33,6 +33,12 @@ export const Input = styled.input<IconPositionProps>`
     border: 0;
     outline: none;
     width: ${iconPosition === 'right' ? `calc(100% - 2.2rem)` : `100%`};
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 ${theme.spacings.small}
+        ${theme.colors.lightGray} inset;
+      filter: none
+    }
   `}
 `
 
