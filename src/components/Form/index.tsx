@@ -16,6 +16,13 @@ export const FormWrapper = styled.div`
   `}
 `
 
+export const FormLoading = styled.img.attrs(() => ({
+  src: '/img/dots.svg',
+  alt: 'Waiting...'
+}))`
+  width: 4rem;
+`
+
 export const FormLink = styled.div`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
