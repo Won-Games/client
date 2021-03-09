@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { AccountCircle, Email, Lock } from '@styled-icons/material-outlined'
 
-import { FormWrapper, FormLink } from 'components/Form'
+import { FormWrapper, FormLink, FormLoading } from 'components/Form'
 import Button from 'components/Button'
 import TextField from 'components/TextField'
 import { UsersPermissionsRegisterInput } from 'graphql/generated/globalTypes'
@@ -16,7 +16,7 @@ const FormSignUp = () => {
     password: ''
   })
 
-  const [createUser] = useMutation(MUTATION_REGISTER)
+  const [createUser, { loading }] = useMutation(MUTATION_REGISTER)
 
   const handleInput = (field: string, value: string) => {
     setValues((s) => ({ ...s, [field]: value }))
@@ -68,8 +68,8 @@ const FormSignUp = () => {
           icon={<Lock />}
         />
 
-        <Button type="submit" size="large" fullWidth>
-          Sign up now
+        <Button type="submit" size="large" fullWidth disabled={loading}>
+          {loading ? <FormLoading /> : <span>Sign up now</span>}
         </Button>
 
         <FormLink>
