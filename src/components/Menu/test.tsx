@@ -42,7 +42,7 @@ describe('<Menu />', () => {
     expect(screen.getAllByText(/sign in/i)).toHaveLength(2)
   })
 
-  it('should show wishlight and account when logged in', () => {
+  it('should show wishlist and account when logged in', () => {
     render(<Menu username="will" />)
 
     expect(screen.getAllByText(/my profile/i)).toHaveLength(2)
