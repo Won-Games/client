@@ -110,8 +110,14 @@ const FormSignUp = () => {
           icon={<Lock />}
         />
 
-        <Button type="submit" size="large" fullWidth disabled={loading} loading={loading}>
-         <span>Sign up now</span>
+         <Button
+          type="submit"
+          size="large"
+          fullWidth
+          disabled={loading}
+          loading={loading}
+        >
+          <span>Sign up now</span>
         </Button>
 
         <FormLink>
