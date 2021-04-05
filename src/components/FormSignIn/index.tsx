@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 import { Email, Lock, ErrorOutline } from '@styled-icons/material-outlined'
 
-import { FormLink, FormWrapper, FormLoading, FormError } from 'components/Form'
+import { FormLink, FormWrapper, FormError } from 'components/Form'
 import Button from 'components/Button'
 import TextField from 'components/TextField'
 
@@ -83,8 +83,8 @@ const FormSignIn = () => {
           <S.ForgotPassword>Forgot your password?</S.ForgotPassword>
         </Link>
 
-        <Button type="submit" size="large" fullWidth disabled={loading}>
-          {loading ? <FormLoading /> : <span>Sign in now</span>}
+        <Button type="submit" size="large" fullWidth disabled={loading} loading={loading}>
+       <span>Sign in now</span>
         </Button>
 
         <FormLink>
