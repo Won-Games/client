@@ -7,7 +7,7 @@ import {
   Lock
 } from '@styled-icons/material-outlined'
 
-import { FormWrapper, FormLink, FormLoading, FormError } from 'components/Form'
+import { FormWrapper, FormLink, FormError } from 'components/Form'
 import Button from 'components/Button'
 import TextField from 'components/TextField'
 import { UsersPermissionsRegisterInput } from 'graphql/generated/globalTypes'
@@ -110,8 +110,8 @@ const FormSignUp = () => {
           icon={<Lock />}
         />
 
-        <Button type="submit" size="large" fullWidth disabled={loading}>
-          {loading ? <FormLoading /> : <span>Sign up now</span>}
+        <Button type="submit" size="large" fullWidth disabled={loading} loading={loading}>
+         <span>Sign up now</span>
         </Button>
 
         <FormLink>
