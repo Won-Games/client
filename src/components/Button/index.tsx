@@ -1,3 +1,4 @@
+import { FormLoading } from 'components/Form'
 import { forwardRef, AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
 import * as S from './styles'
 
@@ -9,6 +10,7 @@ export type ButtonProps = {
   size?: 'small' | 'medium' | 'large'
   fullWidth?: boolean
   minimal?: boolean
+  loading?: boolean
   icon?: JSX.Element
   as?: React.ElementType
 } & ButtonTypes
@@ -20,6 +22,7 @@ const Button: React.ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
     size = 'medium',
     fullWidth = false,
     minimal = false,
+    loading,
     ...props
   },
   ref
@@ -33,7 +36,7 @@ const Button: React.ForwardRefRenderFunction<S.WrapperProps, ButtonProps> = (
     {...props}
   >
     {icon}
-    {!!children && <span>{children}</span>}
+    {loading ? <FormLoading /> : !!children && <span>{children}</span>}
   </S.Wrapper>
 )
 
