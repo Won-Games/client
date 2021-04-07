@@ -28,6 +28,10 @@ exports[`<Highlight /> should render headings and button 1`] = `
   padding: 0.8rem 3.2rem;
 }
 
+.c5:focus {
+  outline: 1px dashed;
+}
+
 .c5:hover {
   background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
 }
@@ -127,4 +131,4 @@ exports[`<Highlight /> should render headings and button 1`] = `
     </a>
   </div>
 </section>
-`
+`;
