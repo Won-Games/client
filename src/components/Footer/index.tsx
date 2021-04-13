@@ -4,6 +4,8 @@ import Heading from 'components/Heading'
 import Logo from 'components/Logo'
 import * as S from './styles'
 
+const currentYear = new Date().getFullYear()
+
 const Footer = () => (
   <S.Wrapper>
     <Logo color="black" />
@@ -81,7 +83,7 @@ const Footer = () => (
       </S.Column>
     </S.Content>
 
-    <S.Copyright>Won Games 2020 © All rights reserved.</S.Copyright>
+    <S.Copyright>Won Games {currentYear} © All rights reserved.</S.Copyright>
   </S.Wrapper>
 )
 
