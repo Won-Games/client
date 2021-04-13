@@ -1,10 +1,11 @@
+import 'session.mock'
 import 'match-media-mock'
 import { render, screen } from 'utils/test-utils'
 import items from './mock'
 
 import GameCardSlider from '.'
 
-describe('<GameSlider />', () => {
+describe('<GameCardSlider />', () => {
   it('should render with 4 active items', () => {
     const { container } = render(<GameCardSlider items={items} />)
     expect(container.querySelectorAll('.slick-active')).toHaveLength(4)
