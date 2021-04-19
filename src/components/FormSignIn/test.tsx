@@ -34,7 +34,7 @@ describe('<FormSignIn />', () => {
     ).toBeInTheDocument()
   })
 
-  it('should render text to sign up if already have an account', () => {
+  it('should render text to sign up if doesn’t have an account', () => {
     render(<FormSignIn />)
 
     expect(screen.getByRole('link', { name: /sign up/i })).toBeInTheDocument()
