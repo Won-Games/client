@@ -8,8 +8,14 @@ import Button from 'components/Button'
 import Heading from 'components/Heading'
 
 import * as S from './styles'
+import { createPaymentIntent } from 'utils/stripe/methods'
+import { session, Session, useSession } from 'next-auth/client'
 
-const PaymentForm = () => {
+type PaymentFormProps = {
+  session: Session
+}
+
+const PaymentForm = ({ session }: PaymentFormProps) => {
   const { items } = useCart()
   const [error, setError] = useState<string | null>(null)
   const [disabled, setDisabled] = useState(true)
@@ -17,17 +23,37 @@ const PaymentForm = () => {
   const [freeGames, setFreeGames] = useState(false)
 
   useEffect(() => {
-    if (items.length) {
-      // bater na API /orders/create-payment-intent
-      // enviar os items do carrinho
-      // se eu receber freeGames: true => setFreeGames
-      // faço o fluxo de jogo gratuito
-      // se eu receber um erro
-      // setError
-      // senão o paymentIntent foi válido
-      // setClientSecret
+    async function setPaymentMode() {
+      if (items.length) {
+        // bater na API /orders/create-payment-intent
+        const data = await createPaymentIntent({
+          items,
+          token: session.jwt
+        })
+
+        // se eu receber freeGames: true => setFreeGames
+        // faço o fluxo de jogo gratuito
+        if (data.freeGames) {
+          setFreeGames(true)
+          console.log(data.freeGames)
+          return
+        }
+
+        // se eu receber um erro
+        // setError
+        if (data.error) {
+          setError(data.error)
+        } else {
+          // senão o paymentIntent foi válido
+          // setClientSecret
+          setClientSecret(data.client_secret)
+          console.log(data.client_secret)
+        }
+      }
     }
-  }, [items])
+
+    setPaymentMode()
+  }, [items, session])
 
   const handleChange = async (event: StripeCardElementChangeEvent) => {
     setDisabled(event.empty)
