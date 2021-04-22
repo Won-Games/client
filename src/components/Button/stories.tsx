@@ -9,6 +9,17 @@ export default {
     children: {
       type: 'string'
     },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large']
+      }
+    },
+    minimal: {
+      control: {
+        type: 'boolean'
+      }
+    },
     icon: {
       type: ''
     }
