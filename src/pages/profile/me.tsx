@@ -29,7 +29,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   >({
     query: QUERY_PROFILE_ME,
     variables: {
-      identifier: session?.id
+      identifier: session?.id as string
     }
   })
 

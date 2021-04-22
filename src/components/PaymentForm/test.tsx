@@ -1,5 +1,5 @@
 import { CartContextData, CartContextDefaultValues } from 'hooks/use-cart'
-import { Session } from 'next-auth/client'
+import { Session } from 'next-auth'
 import { render, screen, waitFor } from 'utils/test-utils'
 
 import * as stripeMethods from 'utils/stripe/methods'

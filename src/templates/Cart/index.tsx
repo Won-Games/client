@@ -1,4 +1,4 @@
-import { Session } from 'next-auth/client'
+import { Session } from 'next-auth'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 
