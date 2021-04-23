@@ -17,7 +17,12 @@ const WishlistButton = ({
 }: WishlistButtonProps) => {
   const [session] = useSession()
   const [loading, setLoading] = useState(false)
-  const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist()
+  const {
+    isInWishlist,
+    addToWishlist,
+    removeFromWishlist,
+    loading: loadingApollo
+  } = useWishlist()
 
   const handleClick = async () => {
     setLoading(true)
@@ -45,6 +50,8 @@ const WishlistButton = ({
       onClick={handleClick}
       minimal
       size={size}
+      disabled={loadingApollo}
+      style={{ filter: 'none' }}
     >
       {hasText && ButtonText}
     </Button>
