@@ -141,7 +141,7 @@ describe('cartMapper()', () => {
 
 describe('ordersMapper()', () => {
   it('should return empty array if no orders', () => {
-    expect(cartMapper(undefined)).toStrictEqual([])
+    expect(ordersMapper(undefined)).toStrictEqual([])
   })
 
   it('should return mapped items', () => {
