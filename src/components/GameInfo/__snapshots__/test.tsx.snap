@@ -282,6 +282,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
     </button>
     <button
       class="c8"
+      style="filter: none;"
     >
       <svg
         aria-hidden="true"
@@ -306,4 +307,4 @@ exports[`<GameInfo /> should render game informations 1`] = `
     </button>
   </div>
 </div>
-`;
+`

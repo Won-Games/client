@@ -244,6 +244,7 @@ exports[`<GameCard /> should render correctly 1`] = `
     >
       <button
         class="c7"
+        style="filter: none;"
       >
         <svg
           aria-hidden="true"
@@ -296,4 +297,4 @@ exports[`<GameCard /> should render correctly 1`] = `
     </div>
   </div>
 </article>
-`;
+`
