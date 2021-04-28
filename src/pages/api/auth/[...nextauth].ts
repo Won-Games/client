@@ -2,7 +2,7 @@ import NextAuth, { User } from 'next-auth'
 import { Session } from 'next-auth'
 import { JWT } from 'next-auth/jwt'
 import Providers from 'next-auth/providers'
-import { NextApiRequest, NextApiResponse } from 'next-auth/_next'
+import { NextApiRequest, NextApiResponse } from 'next-auth/internals/utils'
 
 type AuthorizeProps = {
   email: string
