@@ -128,6 +128,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
   align-items: center;
   font-weight: 600;
   color: #FAFAFA;
+  z-index: 10;
   background-color: #3CD3C1;
   font-size: 1.4rem;
   padding: 0 2.4rem;
@@ -307,4 +308,4 @@ exports[`<GameInfo /> should render game informations 1`] = `
     </button>
   </div>
 </div>
-`
+`;

@@ -14,6 +14,7 @@ exports[`<Ribbon /> should render the text correctly 1`] = `
   align-items: center;
   font-weight: 600;
   color: #FAFAFA;
+  z-index: 10;
   background-color: #F231A5;
   font-size: 1.4rem;
   padding: 0 2.4rem;
@@ -49,4 +50,4 @@ exports[`<Ribbon /> should render the text correctly 1`] = `
 >
   Best Seller
 </div>
-`
+`;
