@@ -270,11 +270,11 @@ exports[`<GameCard /> should render correctly 1`] = `
         $235.00
       </div>
       <button
+        aria-label="Add to cart"
         class="c11"
       >
         <svg
           aria-hidden="true"
-          aria-label="Add to cart"
           class="c8"
           fill="currentColor"
           focusable="false"
