@@ -17,9 +17,6 @@ export const Wrapper = styled.main`
 export const BannerBlock = styled.div`
   ${({ theme }) => css`
     position: relative;
-    background-image: url(/img/auth-bg.jpg);
-    background-size: cover;
-    background-position: center center;
     padding: ${theme.spacings.xxlarge} ${theme.spacings.xxlarge}
       ${theme.spacings.large};
 
