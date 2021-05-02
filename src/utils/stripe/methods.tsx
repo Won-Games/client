@@ -4,7 +4,7 @@ import { CartItem } from 'hooks/use-cart'
 type FetcherParams = {
   url: string
   body: string
-  token: string
+  token: string | unknown
 }
 
 const fetcher = async ({ url, body, token }: FetcherParams) => {
