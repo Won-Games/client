@@ -1,3 +1,4 @@
 {
-  "video": false
+  "video": false,
+  "integrationFolder": "cypress/e2e"
 }
