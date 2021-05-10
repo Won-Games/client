@@ -35,3 +35,7 @@ public/workbox-*.js
 
 # storybook
 storybook-static
+
+# cypress
+cypress/screenshots
+cypress/videos
