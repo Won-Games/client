@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.button`
   ${({ theme }) => css`
     color: ${theme.colors.white};
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     width: 2.4rem;
     height: 2.4rem;
     position: relative;
