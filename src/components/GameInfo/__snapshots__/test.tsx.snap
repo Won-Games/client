@@ -35,7 +35,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
 }
 
 .c6:focus {
-  outline: 1px dashed;
+  box-shadow: 0 0 0 3px #3CD3C1;
 }
 
 .c6:hover {
@@ -80,7 +80,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
 }
 
 .c8:focus {
-  outline: 1px dashed;
+  box-shadow: 0 0 0 3px #3CD3C1;
 }
 
 .c8:hover {
@@ -308,4 +308,4 @@ exports[`<GameInfo /> should render game informations 1`] = `
     </button>
   </div>
 </div>
-`;
+`
