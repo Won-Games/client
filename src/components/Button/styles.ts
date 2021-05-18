@@ -65,7 +65,7 @@ export const Wrapper = styled.button<WrapperProps>`
     text-decoration: none;
 
     &:focus {
-      outline: 1px dashed;
+      box-shadow: 0 0 0 3px ${theme.colors.secondary};
     }
 
     &:hover {

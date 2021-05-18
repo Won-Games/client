@@ -36,7 +36,7 @@ exports[`<GameCard /> should render correctly 1`] = `
 }
 
 .c7:focus {
-  outline: 1px dashed;
+  box-shadow: 0 0 0 3px #3CD3C1;
 }
 
 .c7:hover {
@@ -82,7 +82,7 @@ exports[`<GameCard /> should render correctly 1`] = `
 }
 
 .c11:focus {
-  outline: 1px dashed;
+  box-shadow: 0 0 0 3px #3CD3C1;
 }
 
 .c11:hover {
@@ -293,4 +293,4 @@ exports[`<GameCard /> should render correctly 1`] = `
     </div>
   </div>
 </article>
-`;
+`

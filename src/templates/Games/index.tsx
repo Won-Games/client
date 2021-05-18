@@ -85,7 +85,7 @@ const GamesTemplate = ({ filterItems }: GamesTemplateProps) => {
                       alt="Loading more games..."
                     />
                   ) : (
-                    <S.ShowMoreButton role="button" onClick={handleShowMore}>
+                    <S.ShowMoreButton onClick={handleShowMore}>
                       <p>Show More</p>
                       <ArrowDown size={35} />
                     </S.ShowMoreButton>

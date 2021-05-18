@@ -29,7 +29,7 @@ exports[`<Highlight /> should render headings and button 1`] = `
 }
 
 .c5:focus {
-  outline: 1px dashed;
+  box-shadow: 0 0 0 3px #3CD3C1;
 }
 
 .c5:hover {
@@ -138,4 +138,4 @@ exports[`<Highlight /> should render headings and button 1`] = `
     </a>
   </div>
 </section>
-`;
+`

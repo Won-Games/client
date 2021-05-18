@@ -90,7 +90,7 @@ exports[`<FormSignUp /> should render the form 1`] = `
 }
 
 .c7:focus {
-  outline: 1px dashed;
+  box-shadow: 0 0 0 3px #3CD3C1;
 }
 
 .c7:hover {
@@ -306,4 +306,4 @@ exports[`<FormSignUp /> should render the form 1`] = `
     </div>
   </form>
 </div>
-`;
+`
