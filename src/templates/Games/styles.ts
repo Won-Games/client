@@ -19,13 +19,16 @@ export const ShowMore = styled.div`
   height: 10rem;
 `
 
-export const ShowMoreButton = styled.div`
+export const ShowMoreButton = styled.button`
   ${({ theme }) => css`
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
     color: ${theme.colors.white};
+    background-color: transparent;
+    border: none;
+    padding: ${theme.spacings.xsmall};
 
     > svg {
       color: ${theme.colors.primary};
