@@ -18,7 +18,7 @@ jest.mock('next-auth/client', () => ({
   signIn: jest.fn()
 }))
 
-describe('<FormResetPassword>', () => {
+describe('<FormResetPassword />', () => {
   it('should render the form', () => {
     render(<FormResetPassword />)
 
@@ -32,8 +32,8 @@ describe('<FormResetPassword>', () => {
   it('should show validation errors', async () => {
     render(<FormResetPassword />)
 
-    await userEvent.type(screen.getByPlaceholderText('Password'), '123')
-    await userEvent.type(screen.getByPlaceholderText(/confirm/i), '321')
+    userEvent.type(screen.getByPlaceholderText('Password'), '123')
+    userEvent.type(screen.getByPlaceholderText(/confirm/i), '321')
 
     userEvent.click(screen.getByRole('button', { name: /reset password/i }))
 
@@ -44,8 +44,8 @@ describe('<FormResetPassword>', () => {
     query = { code: 'wrong_code' }
     render(<FormResetPassword />)
 
-    await userEvent.type(screen.getByPlaceholderText('Password'), '123')
-    await userEvent.type(screen.getByPlaceholderText(/confirm/i), '123')
+    userEvent.type(screen.getByPlaceholderText('Password'), '123')
+    userEvent.type(screen.getByPlaceholderText(/confirm/i), '123')
 
     userEvent.click(screen.getByRole('button', { name: /reset password/i }))
 
@@ -59,8 +59,8 @@ describe('<FormResetPassword>', () => {
 
     render(<FormResetPassword />)
 
-    await userEvent.type(screen.getByPlaceholderText('Password'), '123')
-    await userEvent.type(screen.getByPlaceholderText(/confirm/i), '123')
+    userEvent.type(screen.getByPlaceholderText('Password'), '123')
+    userEvent.type(screen.getByPlaceholderText(/confirm/i), '123')
 
     userEvent.click(screen.getByRole('button', { name: /reset password/i }))
 
