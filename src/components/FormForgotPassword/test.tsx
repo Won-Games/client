@@ -25,10 +25,7 @@ describe('<FormForgotPassword />', () => {
   it('should validate the email', async () => {
     render(<FormForgotPassword />)
 
-    await userEvent.type(
-      screen.getByPlaceholderText(/email/i),
-      'valid@email.com'
-    )
+    userEvent.type(screen.getByPlaceholderText(/email/i), 'valid@email.com')
 
     userEvent.click(screen.getByRole('button', { name: /send email/i }))
 
@@ -37,10 +34,10 @@ describe('<FormForgotPassword />', () => {
     ).toBeInTheDocument()
   })
 
-  it('should show an invalid email', async () => {
+  it('should show an invalid email error', async () => {
     render(<FormForgotPassword />)
 
-    await userEvent.type(screen.getByPlaceholderText(/email/i), 'invalid')
+    userEvent.type(screen.getByPlaceholderText(/email/i), 'invalid')
 
     userEvent.click(screen.getByRole('button', { name: /send email/i }))
 
@@ -52,10 +49,7 @@ describe('<FormForgotPassword />', () => {
   it('should show an inexistent email error', async () => {
     render(<FormForgotPassword />)
 
-    await userEvent.type(
-      screen.getByPlaceholderText(/email/i),
-      'false@email.com'
-    )
+    userEvent.type(screen.getByPlaceholderText(/email/i), 'false@email.com')
 
     userEvent.click(screen.getByRole('button', { name: /send email/i }))
 
