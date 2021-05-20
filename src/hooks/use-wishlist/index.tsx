@@ -1,11 +1,14 @@
 import { useMutation } from '@apollo/client'
 import { GameCardProps } from 'components/GameCard'
-import { QueryWishlist_wishlists_games } from 'graphql/generated/QueryWishlist'
+import {
+  QueryWishlist,
+  QueryWishlist_wishlists_games
+} from 'graphql/generated/QueryWishlist'
 import {
   MUTATION_CREATE_WISHLIST,
   MUTATION_UPDATE_WISHLIST
 } from 'graphql/mutations/wishlist'
-import { useQueryWishlist } from 'graphql/queries/wishlist'
+import { QUERY_WISHLIST, useQueryWishlist } from 'graphql/queries/wishlist'
 import { useSession } from 'next-auth/client'
 import { useMemo } from 'react'
 import { useState } from 'react'
@@ -36,6 +39,26 @@ export type WishlistProviderProps = {
   children: React.ReactNode
 }
 
+const optimisticGameResponse = (id: string) => {
+  return {
+    __typename: 'Game',
+    id,
+    name: '',
+    slug: '',
+    cover: {
+      __typename: 'UploadFile',
+      url: ''
+    },
+    developers: [
+      {
+        __typename: 'Developer',
+        name: ''
+      }
+    ],
+    price: ''
+  }
+}
+
 const WishlistProvider = ({ children }: WishlistProviderProps) => {
   const [session] = useSession()
   const [wishlistId, setWishlistId] = useState<string | null>()
@@ -64,13 +87,15 @@ const WishlistProvider = ({ children }: WishlistProviderProps) => {
     }
   )
 
-  const { data, loading: loadingQuery } = useQueryWishlist({
+  const options = {
     skip: !session?.user?.email,
     context: { session },
     variables: {
       identifier: session?.user?.email as string
     }
-  })
+  }
+
+  const { data, loading: loadingQuery } = useQueryWishlist(options)
 
   useEffect(() => {
     setWishlistItems(data?.wishlists[0]?.games || [])
@@ -82,22 +107,60 @@ const WishlistProvider = ({ children }: WishlistProviderProps) => {
   ])
 
   const isInWishlist = (id: string) =>
-    !!wishlistItems.find((game) => game.id === id)
+    wishlistItems.some((game) => game.id === id)
 
   const addToWishlist = (id: string) => {
     // se não existir wishlist - cria
     if (!wishlistId) {
       return createList({
-        variables: { input: { data: { games: [...wishlistIds, id] } } }
+        variables: { input: { data: { games: [...wishlistItems, id] } } },
+        optimisticResponse: {
+          createWishlist: {
+            wishlist: {
+              id: String(Math.round(Math.random() * -1000000)),
+              games: [optimisticGameResponse(id)],
+              __typename: 'Wishlist'
+            },
+            __typename: 'createWishlistPayload'
+          }
+        },
+        update: (cache, payload) => {
+          const newWishlist = payload.data.createWishlist.wishlist
+
+          const existingWishlist = cache.readQuery<QueryWishlist>({
+            query: QUERY_WISHLIST,
+            ...options
+          })
+
+          if (existingWishlist && newWishlist) {
+            cache.writeQuery({
+              query: QUERY_WISHLIST,
+              data: {
+                wishlists: [newWishlist]
+              },
+              ...options
+            })
+          }
+        }
       })
     }
 
-    // // senão atualiza a wishlist existente
+    // senão atualiza a wishlist existente
     return updateList({
       variables: {
         input: {
           where: { id: wishlistId },
           data: { games: [...wishlistIds, id] }
+        }
+      },
+      optimisticResponse: {
+        updateWishlist: {
+          wishlist: {
+            id: wishlistId,
+            games: [...wishlistItems, optimisticGameResponse(id)],
+            __typename: 'Wishlist'
+          },
+          __typename: 'updateWishlistPayload'
         }
       }
     })
@@ -109,6 +172,16 @@ const WishlistProvider = ({ children }: WishlistProviderProps) => {
         input: {
           where: { id: wishlistId },
           data: { games: wishlistIds.filter((gameId: string) => gameId !== id) }
+        }
+      },
+      optimisticResponse: {
+        updateWishlist: {
+          wishlist: {
+            id: wishlistId,
+            games: wishlistItems.filter(({ id: gameId }) => gameId !== id),
+            __typename: 'Wishlist'
+          },
+          __typename: 'updateWishlistPayload'
         }
       }
     })
