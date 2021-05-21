@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+import { darken } from 'polished'
+
 import { Container } from 'components/Container'
 
 export const Main = styled(Container)`
@@ -29,9 +31,19 @@ export const ShowMoreButton = styled.button`
     background-color: transparent;
     border: none;
     padding: ${theme.spacings.xsmall};
+    transition: color ${theme.transition.default};
 
     > svg {
+      transition: color ${theme.transition.default};
       color: ${theme.colors.primary};
+    }
+
+    &:hover {
+      color: ${darken(0.3, theme.colors.white)};
+
+      > svg {
+        color: ${darken(0.2, theme.colors.primary)};
+      }
     }
   `}
 `
