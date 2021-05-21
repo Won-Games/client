@@ -14,6 +14,7 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   ${({ theme }) => css`
+    cursor: auto;
     display: flex;
     flex-direction: column;
     background: ${theme.colors.white};
