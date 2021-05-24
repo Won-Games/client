@@ -153,6 +153,7 @@ exports[`<CartList /> should render the cart list 1`] = `
 
 <div
   class="c0"
+  data-cy="cart-list"
 >
   <div
     class="c1"
