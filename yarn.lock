@@ -6490,6 +6490,11 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
+cypress-plugin-stripe-elements@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cypress-plugin-stripe-elements/-/cypress-plugin-stripe-elements-1.0.1.tgz#70034c1fddc5fbb40567f7460f51d214f19c3172"
+  integrity sha512-GLofWHUWkl/efX8IHlsA6BxtizdAPucwHpAYb3k0mr/ZqCTi+4xbv4Ab9P9YmsacHxCckemylJe3Q6QklZihhw==
+
 cypress@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/cypress/-/cypress-7.2.0.tgz#6a3364e18972f898fff1fb12c1ff747939e45ddc"
