@@ -73,3 +73,6 @@ Cypress.Commands.add('getFields', (fields) => {
     cy.findByText(label).should('exist')
   })
 })
+
+// shouldBeGreaterThan
+// shouldBeLessThan
