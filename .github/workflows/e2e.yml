@@ -1,0 +1,32 @@
+name: End to End
+on: [pull_request]
+
+jobs:
+  end-to-end:
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: test
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build the stack
+        run: docker-compose -f ./cypress/docker-compose.yml up -d
+
+      - name: Waiting strapi server
+        run: docker run --network container:wongames_api jwilder/dockerize -wait http://localhost:1337/admin -timeout 120s -wait-retry-interval 5s
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - uses: c-hive/gha-yarn-cache@v1
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Run cypress
+        run: yarn test:e2e:ci
