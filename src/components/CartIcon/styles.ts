@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { darken } from 'polished'
 
 export const Wrapper = styled.button`
   ${({ theme }) => css`
@@ -9,6 +10,11 @@ export const Wrapper = styled.button`
     width: 2.4rem;
     height: 2.4rem;
     position: relative;
+    transition: color ${theme.transition.default};
+
+    &:hover {
+      color: ${darken(0.3, theme.colors.white)};
+    }
   `}
 `
 

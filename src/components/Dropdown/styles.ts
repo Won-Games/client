@@ -14,6 +14,7 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   ${({ theme }) => css`
+    cursor: auto;
     display: flex;
     flex-direction: column;
     background: ${theme.colors.white};
@@ -56,11 +57,13 @@ const wrapperModifiers = {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+    visibility: visible;
   `,
   close: () => css`
     opacity: 0;
     pointer-events: none;
     transform: translateY(-2rem);
+    visibility: hidden;
   `
 }
 
