@@ -37,7 +37,11 @@ export const Input = styled.input<IconPositionProps>`
     &:-webkit-autofill {
       -webkit-box-shadow: 0 0 0 ${theme.spacings.small}
         ${theme.colors.lightGray} inset;
-      filter: none
+      filter: none;
+      &::first-line {
+        font-family: ${theme.font.family};
+        font-size: ${theme.font.sizes.medium};
+      }
     }
   `}
 `
