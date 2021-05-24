@@ -160,6 +160,7 @@ exports[`<CartList /> should render the cart list 1`] = `
   >
     <div
       class="c2"
+      data-cy="game-item"
     >
       <div
         class="c3"
@@ -194,6 +195,7 @@ exports[`<CartList /> should render the cart list 1`] = `
     </div>
     <div
       class="c2"
+      data-cy="game-item"
     >
       <div
         class="c3"
