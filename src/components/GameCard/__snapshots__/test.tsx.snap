@@ -206,6 +206,7 @@ exports[`<GameCard /> should render correctly 1`] = `
 
 <article
   class="c0"
+  data-cy="game-card"
 >
   <a
     class="c1"
@@ -293,4 +294,4 @@ exports[`<GameCard /> should render correctly 1`] = `
     </div>
   </div>
 </article>
-`
+`;
