@@ -34,7 +34,7 @@ describe('Game Page', () => {
       cy.findByRole('heading', { name: /genres/i }).should('exist')
 
       cy.findAllByText(/cd projekt red/i).should('have.length', 2)
-      cy.findByText(/dec 8, 2020/i).should('exist')
+      cy.findByText(/dec 9, 2020/i).should('exist')
       cy.findByRole('img', { name: /windows/i }).should('exist')
       cy.findByText(/free/i).should('exist')
       cy.findByText('Role-playing / Action / Sci-fi').should('exist')
