@@ -13,6 +13,8 @@
     "test:ci": "jest --runInBand",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test dev 3000 cy:open",
+    "test:e2e:ci": "start-server-and-test start 3000 cy:run",
     "schema:download": "apollo client:download-schema --endpoint=http://localhost:1337/graphql schema-temp.gql",
     "schema:convert": "node convertToNonNull.js",
     "codegen": "apollo codegen:generate --target typescript --excludes=node_modules/ --includes=src/graphql/**/*.ts --localSchemaFile schema.gql --tagName=gql --outputFlat src/graphql/generated",
@@ -64,6 +66,7 @@
     "@babel/core": "^7.13.16",
     "@babel/preset-typescript": "^7.13.0",
     "@babel/runtime": "^7.13.17",
+    "@jackfranklin/test-data-bot": "^1.3.0",
     "@storybook/addon-essentials": "6.2.9",
     "@storybook/react": "6.2.9",
     "@testing-library/cypress": "^7.0.6",
@@ -82,6 +85,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
     "cypress": "^7.2.0",
+    "cypress-plugin-stripe-elements": "^1.0.1",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",
@@ -96,6 +100,7 @@
     "node-fetch": "^2.6.1",
     "plop": "^2.7.4",
     "prettier": "^2.2.1",
+    "start-server-and-test": "^1.12.3",
     "typescript": "^4.2.4"
   }
 }
