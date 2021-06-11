@@ -28,6 +28,17 @@ export const IconWrapper = styled.div`
   `}
 `
 
+export const MenuIconWrapper = styled.button`
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: none;
+    background-color: transparent;
+  `}
+`
+
 export const MenuGroup = styled.div`
   ${({ theme }) => css`
     display: flex;

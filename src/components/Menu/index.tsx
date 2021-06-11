@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
 import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
@@ -21,12 +21,27 @@ export type MenuProps = {
 const Menu = ({ username, loading }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
+  useEffect(() => {
+    const handleMenu = ({ key }: KeyboardEvent) => {
+      if (key === 'Enter') {
+        setIsOpen(true)
+      }
+
+      if (key === 'Escape') {
+        setIsOpen(false)
+      }
+    }
+
+    window.addEventListener('keyup', handleMenu)
+    return () => window.removeEventListener('keyup', handleMenu)
+  }, [])
+
   return (
     <S.Wrapper isOpen={isOpen}>
       <MediaMatch lessThan="medium">
-        <S.IconWrapper onClick={() => setIsOpen(true)}>
+        <S.MenuIconWrapper onClick={() => setIsOpen(true)}>
           <MenuIcon aria-label="Open Menu" />
-        </S.IconWrapper>
+        </S.MenuIconWrapper>
       </MediaMatch>
 
       <S.LogoWrapper>
