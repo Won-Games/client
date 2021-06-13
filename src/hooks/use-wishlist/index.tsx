@@ -1,5 +1,6 @@
-import { useMutation } from '@apollo/client'
+import { useApolloClient, useMutation } from '@apollo/client'
 import { GameCardProps } from 'components/GameCard'
+import { GameFragment } from 'graphql/fragments/game'
 import {
   QueryWishlist,
   QueryWishlist_wishlists_games
@@ -39,32 +40,13 @@ export type WishlistProviderProps = {
   children: React.ReactNode
 }
 
-const optimisticGameResponse = (id: string) => {
-  return {
-    __typename: 'Game',
-    id,
-    name: '',
-    slug: '',
-    cover: {
-      __typename: 'UploadFile',
-      url: ''
-    },
-    developers: [
-      {
-        __typename: 'Developer',
-        name: ''
-      }
-    ],
-    price: ''
-  }
-}
-
 const WishlistProvider = ({ children }: WishlistProviderProps) => {
   const [session] = useSession()
   const [wishlistId, setWishlistId] = useState<string | null>()
   const [wishlistItems, setWishlistItems] = useState<
     QueryWishlist_wishlists_games[]
   >([])
+  const apolloClient = useApolloClient()
 
   const [createList, { loading: loadingCreate }] = useMutation(
     MUTATION_CREATE_WISHLIST,
@@ -108,6 +90,33 @@ const WishlistProvider = ({ children }: WishlistProviderProps) => {
 
   const isInWishlist = (id: string) =>
     wishlistItems.some((game) => game.id === id)
+
+  const optimisticGameResponse = (id: string) => {
+    const game = apolloClient.readFragment({
+      id: `Game:${id}`,
+      fragment: GameFragment
+    })
+
+    return (
+      game ?? {
+        __typename: 'Game',
+        id,
+        name: '',
+        slug: '',
+        cover: {
+          __typename: 'UploadFile',
+          url: ''
+        },
+        developers: [
+          {
+            __typename: 'Developer',
+            name: ''
+          }
+        ],
+        price: ''
+      }
+    )
+  }
 
   const addToWishlist = (id: string) => {
     // se não existir wishlist - cria
