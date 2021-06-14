@@ -40,8 +40,8 @@ describe('Game Page', () => {
       cy.findByText('Role-playing / Action / Sci-fi').should('exist')
     })
 
-    cy.shouldRenderShowcase({ name: "Upcoming Games", hightlight: true})
-    cy.shouldRenderShowcase({ name: "You may like these games", hightlight: false})
+    cy.shouldRenderShowcase({ name: "Upcoming Games", highlight: true})
+    cy.shouldRenderShowcase({ name: "You may like these games", highlight: false})
   });
 
   it('should add/remove game in cart', () => {

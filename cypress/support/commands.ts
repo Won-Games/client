@@ -70,13 +70,13 @@ Cypress.Commands.add('shouldRenderBanner', () => {
   })
 })
 
-Cypress.Commands.add('shouldRenderShowcase', ({ name, hightlight = false }) => {
+Cypress.Commands.add('shouldRenderShowcase', ({ name, highlight = false }) => {
   cy.getByDataCy(name).within(() => {
     cy.findByRole('heading', { name }).should('exist')
 
-    cy.getByDataCy('highlight').should(hightlight ? 'exist' : 'not.exist')
+    cy.getByDataCy('highlight').should(highlight ? 'exist' : 'not.exist')
 
-    if (hightlight) {
+    if (highlight) {
       cy.getByDataCy('highlight').within(() => {
         cy.findByRole('link').should('have.attr', 'href')
       })
