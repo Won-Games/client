@@ -1,3 +1,4 @@
+import 'setimmediate'
 global.fetch = require('node-fetch')
 
 import { server } from '../src/utils/mockServer/server'

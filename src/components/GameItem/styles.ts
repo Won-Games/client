@@ -124,8 +124,8 @@ export const CardInfo = styled.div`
     display: flex;
     align-items: center;
 
-    img {
-      margin-left: ${theme.spacings.xxsmall};
+    span {
+      margin-right: ${theme.spacings.xxsmall};
     }
 
     ${media.lessThan('medium')`

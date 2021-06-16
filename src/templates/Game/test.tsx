@@ -99,8 +99,9 @@ describe('<Game />', () => {
   it('should render the cover image', () => {
     render(<Game {...props} />)
 
-    const cover = screen.getByRole('img', { name: /Borderlands 3/i })
-      .parentElement
+    const cover = screen.getByRole('img', {
+      name: /Borderlands 3/i
+    }).parentElement
 
     expect(cover).toHaveStyleRule('height', '70rem', {
       media: '(min-width: 768px)'
