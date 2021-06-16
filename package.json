@@ -88,6 +88,7 @@
     "cypress": "^7.5.0",
     "cypress-plugin-stripe-elements": "^1.0.1",
     "eslint": "^7.28.0",
+    "eslint-config-next": "^11.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-prettier": "^3.4.0",
