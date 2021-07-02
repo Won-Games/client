@@ -94,6 +94,10 @@ exports[`<FormSignIn /> should render the form 1`] = `
   width: 100%;
 }
 
+.c8 > span {
+  white-space: nowrap;
+}
+
 .c8:focus {
   box-shadow: 0 0 0 3px #3CD3C1;
 }

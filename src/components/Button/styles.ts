@@ -64,6 +64,10 @@ export const Wrapper = styled.button<WrapperProps>`
     padding: ${theme.spacings.xxsmall};
     text-decoration: none;
 
+    & > span {
+      white-space: nowrap;
+    }
+
     &:focus {
       box-shadow: 0 0 0 3px ${theme.colors.secondary};
     }
