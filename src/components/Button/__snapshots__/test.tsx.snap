@@ -28,6 +28,10 @@ exports[`<Button /> should render the medium size by default 1`] = `
   padding: 0.8rem 3.2rem;
 }
 
+.c0 > span {
+  white-space: nowrap;
+}
+
 .c0:focus {
   box-shadow: 0 0 0 3px #3CD3C1;
 }

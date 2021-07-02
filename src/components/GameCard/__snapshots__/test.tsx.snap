@@ -35,6 +35,10 @@ exports[`<GameCard /> should render correctly 1`] = `
   color: #F231A5;
 }
 
+.c7 > span {
+  white-space: nowrap;
+}
+
 .c7:focus {
   box-shadow: 0 0 0 3px #3CD3C1;
 }
@@ -79,6 +83,10 @@ exports[`<GameCard /> should render correctly 1`] = `
   text-decoration: none;
   height: 3rem;
   font-size: 1.2rem;
+}
+
+.c11 > span {
+  white-space: nowrap;
 }
 
 .c11:focus {
@@ -294,4 +302,4 @@ exports[`<GameCard /> should render correctly 1`] = `
     </div>
   </div>
 </article>
-`;
+`

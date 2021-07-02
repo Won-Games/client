@@ -28,6 +28,10 @@ exports[`<Banner /> should render correctly 1`] = `
   padding: 0.8rem 4.8rem;
 }
 
+.c5 > span {
+  white-space: nowrap;
+}
+
 .c5:focus {
   box-shadow: 0 0 0 3px #3CD3C1;
 }
@@ -156,4 +160,4 @@ exports[`<Banner /> should render correctly 1`] = `
     </a>
   </div>
 </main>
-`;
+`

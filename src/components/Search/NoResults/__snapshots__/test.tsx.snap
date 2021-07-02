@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should render correctly 1`] = `
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: linear-gradient(180deg,#ff5f5f 0%,#f062c0 50%);
+  color: #FAFAFA;
+  font-family: Poppins,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 4rem;
+  font-size: 1.4rem;
+  padding: 0.8rem 3.2rem;
+}
+
+.c5 > span {
+  white-space: nowrap;
+}
+
+.c5:focus {
+  box-shadow: 0 0 0 3px #3CD3C1;
+}
+
+.c5:hover {
+  background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
+}
+
+.c3 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: calc(10rem + (0.8rem * 2));
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 2.4rem;
+}
+
+.c2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.c4 {
+  font-size: 1.6rem;
+}
+
+@media (max-width:768px) {
+  .c0 img {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .c2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c4 {
+    font-size: 1.4rem;
+  }
+}
+
+<body>
+  <div>
+    <li
+      class="c0"
+    >
+      <img
+        alt="A gamer in a couch playing videogame"
+        height="110"
+        src="/img/empty.svg"
+        width="110"
+      />
+      <div
+        class="c1"
+      >
+        <h3
+          class="c2"
+        >
+          <svg
+            aria-hidden="true"
+            class="c3"
+            fill="currentColor"
+            focusable="false"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h24v24H0V0z"
+              fill="none"
+            />
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            />
+          </svg>
+           No Results Found
+        </h3>
+        <p
+          class="c4"
+        >
+          Try searching another term.
+        </p>
+        <a
+          class="c5"
+          href="/games"
+        >
+          <span>
+            Explore all games 
+          </span>
+        </a>
+      </div>
+    </li>
+  </div>
+</body>
+`

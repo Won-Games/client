@@ -34,6 +34,10 @@ exports[`<GameInfo /> should render game informations 1`] = `
   padding: 0.8rem 4.8rem;
 }
 
+.c6 > span {
+  white-space: nowrap;
+}
+
 .c6:focus {
   box-shadow: 0 0 0 3px #3CD3C1;
 }
@@ -77,6 +81,10 @@ exports[`<GameInfo /> should render game informations 1`] = `
   padding: 0.8rem 4.8rem;
   background: none;
   color: #F231A5;
+}
+
+.c8 > span {
+  white-space: nowrap;
 }
 
 .c8:focus {
@@ -309,4 +317,4 @@ exports[`<GameInfo /> should render game informations 1`] = `
     </button>
   </div>
 </div>
-`;
+`
