@@ -37,7 +37,7 @@ export const WishlistContext = createContext<WishlistContextData>(
 )
 
 export type WishlistProviderProps = {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const WishlistProvider = ({ children }: WishlistProviderProps) => {

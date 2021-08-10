@@ -40,7 +40,7 @@ export const CartContext = createContext<CartContextData>(
 )
 
 export type CartProviderProps = {
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 const CartProvider = ({ children }: CartProviderProps) => {
