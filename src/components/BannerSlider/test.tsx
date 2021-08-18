@@ -39,8 +39,8 @@ describe('<BannerSlider />', () => {
     ).toBeInTheDocument()
 
     expect(
-      screen.getByRole('heading', { name: /defy death 2/i, hidden: true })
-    ).toBeInTheDocument()
+      screen.queryByRole('heading', { name: /defy death 2/i, hidden: true })
+    ).not.toBeInTheDocument()
   })
 
   it('should render with the dots', () => {

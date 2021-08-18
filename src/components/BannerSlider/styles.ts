@@ -35,6 +35,14 @@ export const Wrapper = styled.section`
       }
     }
 
+    .slick-slide {
+      visibility: hidden;
+
+      &.slick-active.slick-current {
+        visibility: visible;
+      }
+    }
+
     ${media.greaterThan('large')`
       ${BannerStyles.Wrapper} {
         max-width: 104rem;
