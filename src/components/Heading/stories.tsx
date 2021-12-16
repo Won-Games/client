@@ -9,7 +9,7 @@ export default {
       type: 'string'
     }
   }
-} as Meta
+} as Meta<HeadingProps>
 
 export const Default: Story<HeadingProps> = (args) => <Heading {...args} />
 

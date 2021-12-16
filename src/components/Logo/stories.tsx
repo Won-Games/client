@@ -9,6 +9,6 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta
+} as Meta<LogoProps>
 
 export const Default: Story<LogoProps> = (args) => <Logo {...args} />

@@ -14,7 +14,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta
+} as Meta<GameCardProps>
 
 export const Default: Story<GameCardProps[]> = (args) => (
   <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
