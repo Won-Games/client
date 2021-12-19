@@ -9,7 +9,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta
+} as Meta<UserDropdownProps>
 
 export const Default: Story<UserDropdownProps> = (args) => (
   <div style={{ maxWidth: '98%', display: 'flex', justifyContent: 'flex-end' }}>

@@ -13,7 +13,7 @@ export default {
   argTypes: {
     onCheck: { action: 'checked' }
   }
-} as Meta
+} as Meta<CheckboxProps>
 
 export const Default: Story<CheckboxProps> = (args) => (
   <>

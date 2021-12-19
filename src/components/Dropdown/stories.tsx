@@ -9,7 +9,7 @@ export default {
       default: 'won-dark'
     }
   }
-} as Meta
+} as Meta<DropdownProps>
 
 export const Default: Story<DropdownProps> = (args) => <Dropdown {...args} />
 
