@@ -94,6 +94,10 @@ exports[`<FormSignUp /> should render the form 1`] = `
   width: 100%;
 }
 
+.c7 > span {
+  white-space: nowrap;
+}
+
 .c7:focus {
   box-shadow: 0 0 0 3px #3CD3C1;
 }
