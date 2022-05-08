@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { render, screen } from 'utils/test-utils'
 
 import Banner from '.'
